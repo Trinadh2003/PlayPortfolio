@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Apply the gradient background to the App container */
+.hero-background {
+  background: linear-gradient(
+    70deg,
+    #0f172a,
+    /* Darker blue */ #1e40af,
+    /* Indigo */ #22d3ee,
+    /* Light Cyan */ #9333ea,
+    /* Purple */ #e11d48 /* Red */
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  width: 100%;
+  height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+/* Animation for the gradient background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
